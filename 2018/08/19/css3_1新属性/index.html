@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="CSS3新属性概念 CSS3是CSS2的升级版本，3只是版本号，它在CSS2.1的基础上增加了很多强大的新功能。 目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。   css3前缀  在编写CSS3样式时，不同的浏览器可能需要不同的前缀。它表示该CSS属性或规则尚未成为W3C标准的一部分，是浏览">
+<meta name="keywords" content="CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3新属性">
+<meta property="og:url" content="http://yoursite.com/2018/08/19/css3_1新属性/index.html">
+<meta property="og:site_name" content="Chenluyao&#39;s blog">
+<meta property="og:description" content="CSS3新属性概念 CSS3是CSS2的升级版本，3只是版本号，它在CSS2.1的基础上增加了很多强大的新功能。 目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。   css3前缀  在编写CSS3样式时，不同的浏览器可能需要不同的前缀。它表示该CSS属性或规则尚未成为W3C标准的一部分，是浏览">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6ef5azuj30e60ay3yx.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/005NF29tly1ft3xeikm2sj305m03xjr6.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/005NF29tly1ft3xqkd9oij308p01na9t.jpg">
+<meta property="og:image" content="http://ws1.sinaimg.cn/mw690/005NF29tly1fuf6fcwk6nj308i0183ya.jpg">
+<meta property="og:image" content="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6fmddkoj305c03pq2p.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/005NF29tly1fuf6gckwl2j309g06nmxf.jpg">
+<meta property="og:image" content="http://ws2.sinaimg.cn/mw690/005NF29tly1fuf6gk4r3tj304g02ut8h.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/005NF29tly1fuf6gryat1j30ea02jglh.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/005NF29tly1fuf6h18je7j308a08bglf.jpg">
+<meta property="og:image" content="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6hq0fh2j308e08dq2p.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/005NF29tly1fuf6i4ubcmj307400w3yb.jpg">
+<meta property="og:image" content="http://ws4.sinaimg.cn/mw690/005NF29tly1fuf6hx7d4fj304y07hglg.jpg">
+<meta property="og:image" content="http://ws1.sinaimg.cn/mw690/005NF29tly1fuf6ib5qqtj305l01z744.jpg">
+<meta property="og:updated_time" content="2018-08-19T10:19:24.304Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3新属性">
+<meta name="twitter:description" content="CSS3新属性概念 CSS3是CSS2的升级版本，3只是版本号，它在CSS2.1的基础上增加了很多强大的新功能。 目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。   css3前缀  在编写CSS3样式时，不同的浏览器可能需要不同的前缀。它表示该CSS属性或规则尚未成为W3C标准的一部分，是浏览">
+<meta name="twitter:image" content="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6ef5azuj30e60ay3yx.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/19/css3_1新属性/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>CSS3新属性 | Chenluyao's blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chenluyao's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">hi you're here</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/19/css3_1新属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyao Chen">
+      <meta itemprop="description" content="hi you're here">
+      <meta itemprop="image" content="http://wx4.sinaimg.cn/mw690/005NF29tly1fubmzrc9lij30we0u0gna.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenluyao's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS3新属性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-19 18:05:11 / 修改时间：18:19:24" itemprop="dateCreated datePublished" datetime="2018-08-19T18:05:11+08:00">2018-08-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS3/" itemprop="url" rel="index"><span itemprop="name">CSS3</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="CSS3新属性"><a href="#CSS3新属性" class="headerlink" title="CSS3新属性"></a>CSS3新属性</h2><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li><h5 id="CSS3是CSS2的升级版本，3只是版本号，它在CSS2-1的基础上增加了很多强大的新功能。-目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。"><a href="#CSS3是CSS2的升级版本，3只是版本号，它在CSS2-1的基础上增加了很多强大的新功能。-目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。" class="headerlink" title="CSS3是CSS2的升级版本，3只是版本号，它在CSS2.1的基础上增加了很多强大的新功能。 目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。"></a>CSS3是CSS2的升级版本，3只是版本号，它在CSS2.1的基础上增加了很多强大的新功能。 目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。</h5></li>
+</ul>
+<ul>
+<li><h5 id="css3前缀"><a href="#css3前缀" class="headerlink" title="css3前缀"></a>css3前缀</h5></li>
+</ul>
+<p>在编写CSS3样式时，不同的浏览器可能需要不同的前缀。它表示该CSS属性或规则尚未成为W3C标准的一部分，是浏览器的私有属性，虽然目前较新版本的浏览器都是不需要前缀的，但为了更好的向前兼容前缀还是少不了的。标准写法如表顺序，再在后面添加无前缀的：</p>
+<p><img src="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6ef5azuj30e60ay3yx.jpg" alt="image"></p>
+<p>如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .demo&#123;</span></span><br><span class="line"><span class="undefined">	        width:100px;</span></span><br><span class="line"><span class="undefined">            height: 100px;</span></span><br><span class="line"><span class="undefined">            background: red;</span></span><br><span class="line"><span class="undefined">            border-radius: 50%;</span></span><br><span class="line"><span class="undefined">            -webkit-border-radius:50%;</span></span><br><span class="line"><span class="undefined">            -moz-border-radius:50%;</span></span><br><span class="line"><span class="undefined">            -ms-border-radius:50%;</span></span><br><span class="line"><span class="undefined">            -o-border-radius:50%; </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="css3的属性及功能"><a href="#css3的属性及功能" class="headerlink" title="css3的属性及功能"></a>css3的属性及功能</h4><p>​     css3提供了更加强大且精准的选择器，提供多种背景填充方案，可以实现渐变颜色，可以改变元素的形状、角度等，可以加阴影效果，报纸布局，弹性盒子，ie6混杂模式的盒模型，新的计量单位，动画效果等等等…但是CSS3的兼容性问题同样也显得格外重要，并不是所有CSS3属性都通过了W3C标准，所以…我们需要全面的兼容性查阅手册</p>
+<p><a href="http://www.runoob.com/cssref/css3-browsersupport.html" target="_blank" rel="noopener">http://www.runoob.com/cssref/css3-browsersupport.html</a> 兼容性参考手册</p>
+<p>​</p>
+<h5 id="border-radius"><a href="#border-radius" class="headerlink" title="border-radius"></a>border-radius</h5><blockquote>
+<p>border-radius:0 0 0 0; 四个参数分别对应左上角、右上角、右下角、左下角的弧度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">&gt; 	.wrapper&#123;</span></span><br><span class="line"><span class="undefined">&gt;             position: relative;</span></span><br><span class="line"><span class="undefined">&gt;             width: 100px;</span></span><br><span class="line"><span class="undefined">&gt;             height: 100px;</span></span><br><span class="line"><span class="undefined">&gt;         &#125;</span></span><br><span class="line"><span class="undefined">&gt;         .left &#123;</span></span><br><span class="line"><span class="undefined">&gt;             position: absolute;</span></span><br><span class="line"><span class="undefined">&gt;             width: 100px;</span></span><br><span class="line"><span class="undefined">&gt;             height: 50px;</span></span><br><span class="line"><span class="undefined">&gt;             left: 0;</span></span><br><span class="line"><span class="undefined">&gt;             border-radius: 100px 100px 0 0;</span></span><br><span class="line"><span class="undefined">&gt;             background-color: red;</span></span><br><span class="line"><span class="undefined">&gt;         &#125;</span></span><br><span class="line"><span class="undefined">&gt;</span></span><br><span class="line"><span class="undefined">&gt;         .right &#123;</span></span><br><span class="line"><span class="undefined">&gt;             position: absolute;</span></span><br><span class="line"><span class="undefined">&gt;             width: 100px;</span></span><br><span class="line"><span class="undefined">&gt;             height: 50px;</span></span><br><span class="line"><span class="undefined">&gt;             top: 60px;</span></span><br><span class="line"><span class="undefined">&gt;             left: 0px;</span></span><br><span class="line"><span class="undefined">&gt;             border-radius:  0 0 100px 100px;</span></span><br><span class="line"><span class="undefined">&gt;             background-color: red;</span></span><br><span class="line"><span class="undefined">&gt;         &#125;</span></span><br><span class="line"><span class="undefined">&gt; </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">&gt;      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">&gt;         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&gt;         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&gt;     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+</blockquote>
+<p><img src="https://ws3.sinaimg.cn/large/005NF29tly1ft3xeikm2sj305m03xjr6.jpg" alt="image"></p>
+<h5 id="box-shadow"><a href="#box-shadow" class="headerlink" title="box-shadow"></a>box-shadow</h5><p>box-shadow: </p>
+<table>
+<thead>
+<tr>
+<th>值类型</th>
+<th>参数类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X轴偏移量</td>
+<td>0px,-50px</td>
+</tr>
+<tr>
+<td>Y轴偏移量</td>
+<td>100px-50px;</td>
+</tr>
+<tr>
+<td>阴影模糊半径</td>
+<td>px</td>
+</tr>
+<tr>
+<td>阴影扩展半径</td>
+<td>px</td>
+</tr>
+<tr>
+<td>阴影颜色</td>
+<td>orange red green white</td>
+</tr>
+<tr>
+<td>投影方式</td>
+<td>outset（外部阴影，默认值，无需设置）、inset （将外部阴影改为内部）</td>
+</tr>
+</tbody>
+</table>
+<p>eg:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-shadow</span>&#123;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">3px</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">0</span> green,<span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span> <span class="number">0</span> orange inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="https://ws2.sinaimg.cn/large/005NF29tly1ft3xqkd9oij308p01na9t.jpg" alt="image"></p>
+<h5 id="text-shadow"><a href="#text-shadow" class="headerlink" title="text-shadow"></a>text-shadow</h5><blockquote>
+<p>语法:text-shadow:X-Offset Y-Offset blur color;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Offset</td>
+<td>表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；</td>
+</tr>
+<tr>
+<td>Y-Offset</td>
+<td>是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</td>
+</tr>
+<tr>
+<td>Blur</td>
+<td>是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>是指阴影的颜色，其可以使用rgba色</td>
+</tr>
+</tbody>
+</table>
+<p>比如，我们可以用下面代码实现设置阴影效果。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text-shadow</span>&#123;</span><br><span class="line"><span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果：<img src="http://ws1.sinaimg.cn/mw690/005NF29tly1fuf6fcwk6nj308i0183ya.jpg" alt="image"></p>
+<p>​</p>
+<h5 id="渐变的背景颜色-Gradient"><a href="#渐变的背景颜色-Gradient" class="headerlink" title="渐变的背景颜色 Gradient"></a>渐变的背景颜色 Gradient</h5><h6 id="1）线性渐变（linear-to）"><a href="#1）线性渐变（linear-to）" class="headerlink" title="1）线性渐变（linear - to）"></a>1）线性渐变（linear - to）</h6><p>  <strong>语法</strong>: linear-gradient([direction], color [percent], color [percent], …)  </p>
+<blockquote>
+<p>  [] 内为选填</p>
+<p> direction角度的单位为 “deg” 也可以用to bottom, to left, to top left等的方式来表达</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>&#123;      </span><br><span class="line">    		<span class="attribute">margin</span>:<span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">            <span class="attribute">height</span>:<span class="number">300px</span>;</span><br><span class="line">            <span class="attribute">background</span>:<span class="built_in">linear-gradient</span>(133deg,yellow 10%, green 90%);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6fmddkoj305c03pq2p.jpg" alt="image"></p>
+<blockquote>
+<p><strong>10%</strong>是指在10%的位置开始渐变，如上图</p>
+</blockquote>
+<h6 id="2）径向渐变（radial-at）"><a href="#2）径向渐变（radial-at）" class="headerlink" title="2）径向渐变（radial - at）"></a>2）径向渐变（radial - at）</h6><p> <strong>语法</strong>:radial-gradient(shape at position, color [percent] , color, …)</p>
+<blockquote>
+<p>shape:放射的形状，可以为圆形circle，可以为椭圆ellipse</p>
+<p>position: 圆心位置，可以两个值，也可以一个，如果为一个时，第二个值默认center 即 50%。</p>
+<p>值类型可以为，百分数，距离像素，也可以是方位值(left,top…); x 轴主半径  y轴次半径</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.demo1&#123;</span><br><span class="line">           margin:100px;</span><br><span class="line">           width:300px;</span><br><span class="line">           height:300px;</span><br><span class="line">           background:radial-gradient(circle 100px at center,red 10%, green 80%,transparent 100%);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://wx3.sinaimg.cn/mw690/005NF29tly1fuf6gckwl2j309g06nmxf.jpg" alt="image"></p>
+<p>以<strong>100px</strong>为半径，剩下100%的都变成透明色</p>
+<h5 id="word-wrap"><a href="#word-wrap" class="headerlink" title="word-wrap"></a>word-wrap</h5><table>
+<thead>
+<tr>
+<th>值</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>不换行</td>
+</tr>
+<tr>
+<td>break-word;</td>
+<td>换行</td>
+</tr>
+</tbody>
+</table>
+<p>文字边界换行 （强制换行）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    p&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">width</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span>;</span></span><br><span class="line"><span class="undefined">            word-wrap: break-word;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span>     </span><br><span class="line">   <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        ljlKjlkjlkfdsjaflkjdflkasjdfksljfakls;djasdkjf;dskjfalks</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://ws2.sinaimg.cn/mw690/005NF29tly1fuf6gk4r3tj304g02ut8h.jpg" alt="image"></p>
+<h5 id="font-face"><a href="#font-face" class="headerlink" title="font-face"></a>font-face</h5><p>字体样式</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; @<span class="keyword">font-face</span>&#123;</span><br><span class="line">&gt;     </span><br><span class="line">&gt; font-family:”myFirstFont”;src:url('Sansation_Light.ttf'),url(‘Sansation_Light.eot') format(‘eot’)；</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="selector-tag">p</span>&#123;</span><br><span class="line">&gt;     font-family:”myFristFont”;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>format</strong>: 此值指的是你自定义的字体的格式，主要用来帮助浏览器识别浏览器对@font-face的兼容问题，这里涉及到一个字体format的问题，因为不同的浏览器对字体格式支持是不一致的，浏览器自身也无法通过路径后缀来判断字体</p>
+<p>eg:</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      p&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">width</span><span class="selector-pseudo">:1000px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span>;</span></span><br><span class="line"><span class="undefined">            word-wrap: break-word;</span></span><br><span class="line"><span class="undefined">            font-family: 'Hello Beauty';</span></span><br><span class="line"><span class="undefined">            font-size: 40px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="css">        @<span class="keyword">font-face</span>&#123;</span></span><br><span class="line"><span class="undefined">            font-family: 'Hello Beauty';</span></span><br><span class="line"><span class="undefined">            src : url('./Hello Beauty Personal Use.ttf');</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    He just not that into you.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：<img src="http://wx3.sinaimg.cn/mw690/005NF29tly1fuf6gryat1j30ea02jglh.jpg" alt="image"></p>
+<h5 id="border-image"><a href="#border-image" class="headerlink" title="border-image"></a>border-image</h5><p>边框应用背景</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url(xxx.png)</td>
+<td>添加背景图片</td>
+</tr>
+<tr>
+<td>number</td>
+<td>为截取指定图片四周的宽度作为border的背景填充部分(截取图可按border-width 大小伸缩), number为一个数字时是复合写法最后一个属性为border-image的展示策略</td>
+</tr>
+<tr>
+<td>stretch/repeat/round</td>
+<td>拉伸/和四角上同等大小图片进行平铺，当边框中间区域长度不是四角图片大小的整数倍时，会被切割/铺满</td>
+</tr>
+</tbody>
+</table>
+<p> eg:border-image: url(‘./border.png’) 27 round; way     </p>
+<p>s tretch 很好理解就是拉伸，有多长拉多长。有多远“滚”多远              </p>
+<p>repeat (和4角上 同等大小图片进行平铺  当边框中间区域长度不是4角图片大小的整数倍时 会被切割)               铺满</p>
+<p>(round)(4角上的图片 进行拉伸平铺  不会被切割)（共三个参数）</p>
+<p>eg:border-image: url(‘./border.png’) 27 round;</p>
+<h5 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h5><p>背景图片起始位置</p>
+<blockquote>
+<p>语法：background-origin ： border-box | padding-box | content-box;</p>
+</blockquote>
+<p>参数分别表示背景图片是 从边框，还是<strong>内边距（默认值）</strong>，或者是内容区域开始显示。</p>
+<p>eg:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">           <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">           <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">           <span class="attribute">padding</span>:<span class="number">50px</span>;</span><br><span class="line">           <span class="attribute">border</span>: <span class="number">50px</span> solid <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">           <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'./border-bg.png'</span>);</span><br><span class="line">           <span class="attribute">background-repeat</span>:no-repeat;</span><br><span class="line">           <span class="attribute">background-origin</span>:content-box;</span><br><span class="line">           <span class="comment">/* background:radial-gradient(circle 100px at center,red 10%, green 80%,transparent 100%); */</span></span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/005NF29tly1fuf6h18je7j308a08bglf.jpg" alt="image"></p>
+<h5 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h5><blockquote>
+<p>裁剪背景</p>
+</blockquote>
+<p>eg: 上述代码加上  background-clip:content-box;</p>
+<p>效果：</p>
+<p><img src="http://ws3.sinaimg.cn/mw690/005NF29tly1fuf6hq0fh2j308e08dq2p.jpg" alt="image"></p>
+<ul>
+<li><p>text : background-clip : text ;从前景内容的形状（比如文字）作为裁剪区域向外裁剪，如此即可实现使用背景作为填充色之类的遮罩效果注意：</p>
+<blockquote>
+<p>webkit独有属性，且必须配合text-fill-color属性</p>
+</blockquote>
+<p>-webkit-background-clip:text;</p>
+<p>-webkit-text-fill-color:transparent;</p>
+<p>text-fill-color:-webkit-background-clip;</p>
+<p>-webkit-background-clip: text;</p>
+</li>
+</ul>
+<h5 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h5><p>设置背景图片的大小，以长度值或百分比显示，还可以通过cover和contain来对图片进行伸缩。</p>
+<p><strong>语法</strong>：background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</p>
+<p><strong>取值说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto(默认值)</td>
+<td>默认值，不改变背景图片的原始高度和宽度；</td>
+</tr>
+<tr>
+<td>&lt;长度值&gt;</td>
+<td>成对出现、如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来等比缩放；</td>
+</tr>
+<tr>
+<td>&lt;百分比&gt;</td>
+<td>0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上；</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>用一张图片铺满整个背景，如果比例不符，则截断图</td>
+</tr>
+<tr>
+<td>contain</td>
+<td>尽量让背景内，存在一整张图片</td>
+</tr>
+</tbody>
+</table>
+<h5 id="background-position"><a href="#background-position" class="headerlink" title="background-position"></a>background-position</h5><p>eg:豆瓣评分 通过background-position来定位星数</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/005NF29tly1fuf6i4ubcmj307400w3yb.jpg" alt="image"></p>
+<p><img src="http://ws4.sinaimg.cn/mw690/005NF29tly1fuf6hx7d4fj304y07hglg.jpg" alt="image"></p>
+<p><img src="http://ws1.sinaimg.cn/mw690/005NF29tly1fuf6ib5qqtj305l01z744.jpg" alt="image"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/19/html5_3_补充/" rel="next" title="动画的优化 客户端存储 历史记录 worker GeoLocation 多媒体">
+                <i class="fa fa-chevron-left"></i> 动画的优化 客户端存储 历史记录 worker GeoLocation 多媒体
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/19/css3_2选择器/" rel="prev" title="CSS3选择器">
+                CSS3选择器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODk2Mi8xNTQ5MA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://wx4.sinaimg.cn/mw690/005NF29tly1fubmzrc9lij30we0u0gna.jpg"
+                alt="Luyao Chen" />
+            
+              <p class="site-author-name" itemprop="name">Luyao Chen</p>
+              <p class="site-description motion-element" itemprop="description">hi you're here</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/luyaoyepme" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:luyaoyepme@163.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3新属性"><span class="nav-number">1.</span> <span class="nav-text">CSS3新属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS3是CSS2的升级版本，3只是版本号，它在CSS2-1的基础上增加了很多强大的新功能。-目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">CSS3是CSS2的升级版本，3只是版本号，它在CSS2.1的基础上增加了很多强大的新功能。 目前主流浏览器chrome、safari、firefox、opera、甚至360都已经支持了CSS3大部分功能了，IE10以后也开始全面支持CSS3了。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css3前缀"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">css3前缀</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css3的属性及功能"><span class="nav-number">1.0.2.</span> <span class="nav-text">css3的属性及功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#border-radius"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">border-radius</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#box-shadow"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">box-shadow</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#text-shadow"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">text-shadow</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#渐变的背景颜色-Gradient"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">渐变的背景颜色 Gradient</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1）线性渐变（linear-to）"><span class="nav-number">1.0.2.4.1.</span> <span class="nav-text">1）线性渐变（linear - to）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2）径向渐变（radial-at）"><span class="nav-number">1.0.2.4.2.</span> <span class="nav-text">2）径向渐变（radial - at）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#word-wrap"><span class="nav-number">1.0.2.5.</span> <span class="nav-text">word-wrap</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#font-face"><span class="nav-number">1.0.2.6.</span> <span class="nav-text">font-face</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#border-image"><span class="nav-number">1.0.2.7.</span> <span class="nav-text">border-image</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#background-origin"><span class="nav-number">1.0.2.8.</span> <span class="nav-text">background-origin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#background-clip"><span class="nav-number">1.0.2.9.</span> <span class="nav-text">background-clip</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#background-size"><span class="nav-number">1.0.2.10.</span> <span class="nav-text">background-size</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#background-position"><span class="nav-number">1.0.2.11.</span> <span class="nav-text">background-position</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luyao Chen</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

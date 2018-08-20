@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="CSS3动画transform transform属性向元素应用2D或3D转换，该属性允许我们对元素进行旋转，缩放、移动或者倾斜  transform中主要的方法旋转 ​       可以实现元素的形状、角度、位置等的变化。  rotate() 2D旋转，在括号中填写参数规定旋转的角度。 demo: 123456789101112131415161718&amp;gt;   &amp;lt;style&amp;gt;&amp;g">
+<meta name="keywords" content="CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3动画">
+<meta property="og:url" content="http://yoursite.com/2018/08/19/css3_3动画/index.html">
+<meta property="og:site_name" content="Chenluyao&#39;s blog">
+<meta property="og:description" content="CSS3动画transform transform属性向元素应用2D或3D转换，该属性允许我们对元素进行旋转，缩放、移动或者倾斜  transform中主要的方法旋转 ​       可以实现元素的形状、角度、位置等的变化。  rotate() 2D旋转，在括号中填写参数规定旋转的角度。 demo: 123456789101112131415161718&amp;gt;   &amp;lt;style&amp;gt;&amp;g">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/005NF29tly1ft5rhii7snj307706cjr9.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/005NF29tly1fuf79l3lnwj303x03f0f3.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/005NF29tly1ftlxiqc4yqj30jc0auwgh.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/005NF29tly1ftlxke5hlhj30kf0fmtdr.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/005NF29tly1ftlxlb5ar0j30x9097797.jpg">
+<meta property="og:image" content="http://ws1.sinaimg.cn/mw690/005NF29tly1ftlxlunws8g30pu0cit96.gif">
+<meta property="og:image" content="http://ws3.sinaimg.cn/mw690/005NF29tly1ftlxm7xkbjg30rz0i0qv5.gif">
+<meta property="og:updated_time" content="2018-08-19T10:47:21.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3动画">
+<meta name="twitter:description" content="CSS3动画transform transform属性向元素应用2D或3D转换，该属性允许我们对元素进行旋转，缩放、移动或者倾斜  transform中主要的方法旋转 ​       可以实现元素的形状、角度、位置等的变化。  rotate() 2D旋转，在括号中填写参数规定旋转的角度。 demo: 123456789101112131415161718&amp;gt;   &amp;lt;style&amp;gt;&amp;g">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/large/005NF29tly1ft5rhii7snj307706cjr9.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/19/css3_3动画/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>CSS3动画 | Chenluyao's blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chenluyao's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">hi you're here</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/19/css3_3动画/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyao Chen">
+      <meta itemprop="description" content="hi you're here">
+      <meta itemprop="image" content="http://wx4.sinaimg.cn/mw690/005NF29tly1fubmzrc9lij30we0u0gna.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenluyao's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS3动画
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-19 18:05:11 / 修改时间：18:47:21" itemprop="dateCreated datePublished" datetime="2018-08-19T18:05:11+08:00">2018-08-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS3/" itemprop="url" rel="index"><span itemprop="name">CSS3</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS3动画"><a href="#CSS3动画" class="headerlink" title="CSS3动画"></a>CSS3动画</h1><h3 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h3><blockquote>
+<p>transform属性向元素应用2D或3D转换，该属性允许我们对元素进行旋转，缩放、移动或者倾斜</p>
+</blockquote>
+<h4 id="transform中主要的方法"><a href="#transform中主要的方法" class="headerlink" title="transform中主要的方法"></a>transform中主要的方法</h4><h5 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h5><blockquote>
+<p>​       可以实现元素的形状、角度、位置等的变化。</p>
+</blockquote>
+<h6 id="rotate"><a href="#rotate" class="headerlink" title="rotate()"></a>rotate()</h6><blockquote>
+<p>2D旋转，在括号中填写参数规定旋转的角度。</p>
+<p>demo:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">&gt;     div&#123;</span></span><br><span class="line"><span class="undefined">&gt;       position: relative;</span></span><br><span class="line"><span class="undefined">&gt;       width: 100px;</span></span><br><span class="line"><span class="undefined">&gt;       height: 100px;</span></span><br><span class="line"><span class="undefined">&gt;       top: 100px;</span></span><br><span class="line"><span class="undefined">&gt;       left: 100px;</span></span><br><span class="line"><span class="undefined">&gt;       background: orange;</span></span><br><span class="line"><span class="css">&gt;       <span class="selector-tag">transform</span><span class="selector-pseudo">:rotate(30deg)</span>;</span></span><br><span class="line"><span class="undefined">&gt;     &#125;</span></span><br><span class="line"><span class="undefined">&gt;   </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;   <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">&gt;     demo</span><br><span class="line">&gt;   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>效果：</p>
+<p><img src="http://wx2.sinaimg.cn/large/005NF29tly1ft5rhii7snj307706cjr9.jpg" alt="image"></p>
+</blockquote>
+<h6 id="rotatex"><a href="#rotatex" class="headerlink" title="rotatex()"></a>rotatex()</h6><blockquote>
+<p>实现3D旋转，使元素绕x轴旋转给定的角度。</p>
+</blockquote>
+<h6 id="rotatey"><a href="#rotatey" class="headerlink" title="rotatey()"></a>rotatey()</h6><h6 id="rotatez"><a href="#rotatez" class="headerlink" title="rotatez()"></a>rotatez()</h6><h6 id="rotate3d-x-y-z-angle"><a href="#rotate3d-x-y-z-angle" class="headerlink" title="rotate3d(x, y, z, angle)"></a>rotate3d(x, y, z, angle)</h6><blockquote>
+<p>rotate3d(x,y,z,angle)  前三个参数相当于在x,y,z三个方向上的力找一个合力的方向，以这个方向为轴线，顺时针（值是正数）旋转angle个角度,注意理解前三个参数是矢量值，如：当x !=0,y=z=0时，不管x=多少，元素都是在x轴方向进行旋转角度。</p>
+</blockquote>
+<p>如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.demo</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:200px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:200px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-tag">black</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">transform-style</span><span class="selector-pseudo">:preserve-3d</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">perspective</span><span class="selector-pseudo">:300px</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.aa</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">widtt</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span><span class="selector-pseudo">:orange</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">transform</span><span class="selector-pseudo">:rotate3d(0.5</span>,0,0,45<span class="selector-tag">deg</span>);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"aa"</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h5><h6 id="scale"><a href="#scale" class="headerlink" title="scale()"></a>scale()</h6><blockquote>
+<p>以x/y为轴进行缩放</p>
+</blockquote>
+<h6 id="scale-x-y"><a href="#scale-x-y" class="headerlink" title="scale(x, y)"></a>scale(x, y)</h6><blockquote>
+<p>接受两个值，如果第二参数未提供，则<strong>第二个参数使用第一个参数的值</strong></p>
+</blockquote>
+<h6 id="scalex"><a href="#scalex" class="headerlink" title="scalex()"></a>scalex()</h6><h6 id="scaley"><a href="#scaley" class="headerlink" title="scaley()"></a>scaley()</h6><blockquote>
+<p>值是数字表示倍数，不加任何单位</p>
+</blockquote>
+<blockquote>
+<p>dom元素中的内容也会跟着缩放，如果是负数，如果是-0.5则效果：</p>
+<p><img src="http://wx4.sinaimg.cn/large/005NF29tly1fuf79l3lnwj303x03f0f3.jpg" alt="image"></p>
+</blockquote>
+<h6 id="scalez"><a href="#scalez" class="headerlink" title="scalez()"></a>scalez()</h6><h6 id="scale3d"><a href="#scale3d" class="headerlink" title="scale3d()"></a>scale3d()</h6><blockquote>
+<p> —&gt; scale3d(sx,sy,sz)</p>
+</blockquote>
+<h5 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h5><h6 id="skew"><a href="#skew" class="headerlink" title="skew()"></a>skew()</h6><blockquote>
+<p>对元素进行倾斜扭曲</p>
+<p>skew(x, y);接受两个值，第一个参数对应X轴，第二个参数对应Y轴。</p>
+<p>如果第二个参数未提供，则默认值为0, </p>
+</blockquote>
+<h6 id="skewx"><a href="#skewx" class="headerlink" title="skewx()"></a>skewx()</h6><h6 id="skewy"><a href="#skewy" class="headerlink" title="skewy()"></a>skewy()</h6><h5 id="平移"><a href="#平移" class="headerlink" title="平移"></a>平移</h5><h6 id="translate"><a href="#translate" class="headerlink" title="translate()"></a>translate()</h6><p>可以移动距离,相对于自身位置。</p>
+<h6 id="translate-x-y"><a href="#translate-x-y" class="headerlink" title="translate(x, [y])"></a>translate(x, [y])</h6><h6 id="translatex"><a href="#translatex" class="headerlink" title="translatex()"></a>translatex()</h6><p>填百分号则表示沿x轴平移自身高度的百分比</p>
+<h6 id="translatey"><a href="#translatey" class="headerlink" title="translatey()"></a>translatey()</h6><h6 id="translatez"><a href="#translatez" class="headerlink" title="translatez()"></a>translatez()</h6><h6 id="translate3d-x-y-z"><a href="#translate3d-x-y-z" class="headerlink" title="translate3d(x, y, z)"></a>translate3d(x, y, z)</h6><h4 id="transform-origin-变换原点"><a href="#transform-origin-变换原点" class="headerlink" title="transform-origin 变换原点"></a>transform-origin 变换原点</h4><p>含义：定义了视图的中心，视图中心</p>
+<p>语法:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform-origin</span>: <span class="selector-tag">x-axis</span> <span class="selector-tag">y-axis</span> <span class="selector-tag">z-axis</span>;</span><br></pre></td></tr></table></figure>
+<p>任何一个元素都有一个中心点，默认情况下，其中心点是居于元素x轴和y轴的50%处.</p>
+<blockquote>
+<h5 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h5></blockquote>
+<h5 id=""><a href="#" class="headerlink" title=""></a><img src="http://wx1.sinaimg.cn/mw690/005NF29tly1ftlxiqc4yqj30jc0auwgh.jpg" alt="image"></h5><h3 id="transition-过渡动画"><a href="#transition-过渡动画" class="headerlink" title="transition  过渡动画"></a>transition  过渡动画</h3><p>eg:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo</span>&#123;</span><br><span class="line">          <span class="attribute">position</span>: absolute;</span><br><span class="line">          <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">          <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">          <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">          <span class="attribute">background</span>: red;</span><br><span class="line">          <span class="attribute">transition</span>: width <span class="number">2000ms</span> linear <span class="number">1s</span>;</span><br><span class="line">          <span class="comment">/* 四个参数意义：指定过渡属性--transition-property</span></span><br><span class="line"><span class="comment">                     指定过渡所需时间--transition-duration</span></span><br><span class="line"><span class="comment">                     指定过渡函数--transition-timing-funcition</span></span><br><span class="line"><span class="comment">                     指定开始出现的延迟时间---transition-delay */</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="selector-class">.demo</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">300px</span>;  </span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="相关属性"><a href="#相关属性" class="headerlink" title="相关属性"></a>相关属性</h4><blockquote>
+<p>transition  属性是css3的一个复合属性，主要包括一下几个子属性</p>
+</blockquote>
+<h6 id="transition-property"><a href="#transition-property" class="headerlink" title="transition-property"></a>transition-property</h6><p>指定过渡或动态模拟的css属性</p>
+<h6 id="transition-duration"><a href="#transition-duration" class="headerlink" title="transition-duration"></a>transition-duration</h6><p>指定过渡所需要的时间</p>
+<h6 id="transition-timing-function"><a href="#transition-timing-function" class="headerlink" title="transition-timing-function"></a>transition-timing-function</h6><p>指定过渡函数</p>
+<h6 id="transition-delay"><a href="#transition-delay" class="headerlink" title="transition-delay"></a>transition-delay</h6><p>指定开始出现的延迟时间</p>
+<h4 id="transition-过渡动画可以参与过渡的属性"><a href="#transition-过渡动画可以参与过渡的属性" class="headerlink" title="transition  过渡动画可以参与过渡的属性"></a>transition  过渡动画可以参与过渡的属性</h4><p><img src="http://wx1.sinaimg.cn/mw690/005NF29tly1ftlxke5hlhj30kf0fmtdr.jpg" alt="image"></p>
+<h4 id="transition-function"><a href="#transition-function" class="headerlink" title="transition-function"></a>transition-function</h4><p>速率函数可以选择的值</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/005NF29tly1ftlxlb5ar0j30x9097797.jpg" alt="image"></p>
+<h3 id="animation-动画铺垫"><a href="#animation-动画铺垫" class="headerlink" title="animation 动画铺垫"></a>animation 动画铺垫</h3><h5 id="动画关键帧-keyframes"><a href="#动画关键帧-keyframes" class="headerlink" title="动画关键帧 @keyframes"></a>动画关键帧 @keyframes</h5><blockquote>
+<p>animation 动画会按照keyframes 关键帧里面指定的帧状态而过渡执行。</p>
+</blockquote>
+<p>0% - 100% 代表动画的时间过渡</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">      <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">background</span>:red;</span><br><span class="line">      <span class="attribute">animation</span>: move <span class="number">4s</span> linear both;</span><br><span class="line">  &#125;</span><br><span class="line">  @<span class="keyword">keyframes</span> move&#123;</span><br><span class="line">      0%&#123;         </span><br><span class="line">          <span class="attribute">background</span>:red;      </span><br><span class="line">          <span class="attribute">left</span>:<span class="number">200px</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      100%&#123;</span><br><span class="line">          <span class="attribute">background</span>:green;</span><br><span class="line">          <span class="attribute">left</span>: <span class="number">600px</span>;</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ws1.sinaimg.cn/mw690/005NF29tly1ftlxlunws8g30pu0cit96.gif" alt="image"></p>
+<blockquote>
+<p>帧频里面如果只有 0% 和 100%两个关键帧，那么可以用 from to 代替</p>
+<p>如果from时的状态和初始默认的状态一致的话也可以省去from关键帧，直接写to关键帧</p>
+</blockquote>
+<h5 id="animation相关属性"><a href="#animation相关属性" class="headerlink" title="animation相关属性"></a>animation相关属性</h5><p>animation 属性为css3的复合属性，主要包括以下子属性</p>
+<h6 id="animation-name"><a href="#animation-name" class="headerlink" title="animation-name:"></a>animation-name:</h6><p>此属性为执行动画的 keyframe 名</p>
+<h6 id="animation-duration"><a href="#animation-duration" class="headerlink" title="animation-duration"></a>animation-duration</h6><p>此属性为动画执行的时间</p>
+<h6 id="animation-timing-function"><a href="#animation-timing-function" class="headerlink" title="animation-timing-function"></a>animation-timing-function</h6><p>指定过渡函数速率</p>
+<h6 id="animation-delay"><a href="#animation-delay" class="headerlink" title="animation-delay"></a>animation-delay</h6><p>执行延迟时间</p>
+<h6 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h6><p>属性主要用来设置动画播放方向</p>
+<table>
+<thead>
+<tr>
+<th>animation-direction值</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>默认值。动画按正常播放。</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>动画反向播放。</td>
+</tr>
+<tr>
+<td>alternate</td>
+<td>动画在奇数次（1、3、5…）正向播放，在偶数次（2、4、6…）反向播放。</td>
+</tr>
+<tr>
+<td>alternate-reverse</td>
+<td>动画在奇数次（1、3、5…）反向播放，在偶数次（2、4、6…）正向播放</td>
+</tr>
+</tbody>
+</table>
+<h6 id="animation-iteration-count"><a href="#animation-iteration-count" class="headerlink" title="animation-iteration-count"></a>animation-iteration-count</h6><p>属性主要用来定义动画的播放次数。            </p>
+<table>
+<thead>
+<tr>
+<th>animation-iteration-count</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>infinite</td>
+<td>n 播放次数</td>
+</tr>
+<tr>
+<td>number</td>
+<td>infinite 无限次</td>
+</tr>
+</tbody>
+</table>
+<h6 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h6><p> 属性定义在动画开始之前和结束之后发生的操作。主要具有四个属性值：</p>
+<table>
+<thead>
+<tr>
+<th>animation-fill-mode</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>默认值，表示动画将按预期进行和结束，在动画完成其最后一帧.时，动画会反转到初始帧处</td>
+</tr>
+<tr>
+<td>forwards</td>
+<td>表示动画在结束后继续应用最后的关键帧的位置</td>
+</tr>
+<tr>
+<td>backwards</td>
+<td>会在向元素应用动画样式时迅速应用动画的初始帧（结合延迟1s来看）</td>
+</tr>
+<tr>
+<td>both</td>
+<td>元素动画同时具有forwards和backwards效</td>
+</tr>
+</tbody>
+</table>
+<h6 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h6><p>  属性主要用来控制元素动画的播放状态。            </p>
+<p>​       running 播放            </p>
+<p>​       paused  暂停</p>
+<p>​                </p>
+<p>demo 纵向排列照片墙</p>
+<p><img src="http://ws3.sinaimg.cn/mw690/005NF29tly1ftlxm7xkbjg30rz0i0qv5.gif" alt="image"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/19/css3_3_3d动画/" rel="next" title="CSS3 3D动画">
+                <i class="fa fa-chevron-left"></i> CSS3 3D动画
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/19/css3_4布局/" rel="prev" title="CSS3布局">
+                CSS3布局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODk2Mi8xNTQ5MA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://wx4.sinaimg.cn/mw690/005NF29tly1fubmzrc9lij30we0u0gna.jpg"
+                alt="Luyao Chen" />
+            
+              <p class="site-author-name" itemprop="name">Luyao Chen</p>
+              <p class="site-description motion-element" itemprop="description">hi you're here</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/luyaoyepme" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:luyaoyepme@163.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3动画"><span class="nav-number">1.</span> <span class="nav-text">CSS3动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transform"><span class="nav-number">1.0.1.</span> <span class="nav-text">transform</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#transform中主要的方法"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">transform中主要的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#旋转"><span class="nav-number">1.0.1.1.1.</span> <span class="nav-text">旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#rotate"><span class="nav-number">1.0.1.1.1.1.</span> <span class="nav-text">rotate()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#rotatex"><span class="nav-number">1.0.1.1.1.2.</span> <span class="nav-text">rotatex()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#rotatey"><span class="nav-number">1.0.1.1.1.3.</span> <span class="nav-text">rotatey()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#rotatez"><span class="nav-number">1.0.1.1.1.4.</span> <span class="nav-text">rotatez()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#rotate3d-x-y-z-angle"><span class="nav-number">1.0.1.1.1.5.</span> <span class="nav-text">rotate3d(x, y, z, angle)</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缩放"><span class="nav-number">1.0.1.1.2.</span> <span class="nav-text">缩放</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#scale"><span class="nav-number">1.0.1.1.2.1.</span> <span class="nav-text">scale()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#scale-x-y"><span class="nav-number">1.0.1.1.2.2.</span> <span class="nav-text">scale(x, y)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#scalex"><span class="nav-number">1.0.1.1.2.3.</span> <span class="nav-text">scalex()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#scaley"><span class="nav-number">1.0.1.1.2.4.</span> <span class="nav-text">scaley()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#scalez"><span class="nav-number">1.0.1.1.2.5.</span> <span class="nav-text">scalez()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#scale3d"><span class="nav-number">1.0.1.1.2.6.</span> <span class="nav-text">scale3d()</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#倾斜"><span class="nav-number">1.0.1.1.3.</span> <span class="nav-text">倾斜</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#skew"><span class="nav-number">1.0.1.1.3.1.</span> <span class="nav-text">skew()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#skewx"><span class="nav-number">1.0.1.1.3.2.</span> <span class="nav-text">skewx()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#skewy"><span class="nav-number">1.0.1.1.3.3.</span> <span class="nav-text">skewy()</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#平移"><span class="nav-number">1.0.1.1.4.</span> <span class="nav-text">平移</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#translate"><span class="nav-number">1.0.1.1.4.1.</span> <span class="nav-text">translate()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#translate-x-y"><span class="nav-number">1.0.1.1.4.2.</span> <span class="nav-text">translate(x, [y])</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#translatex"><span class="nav-number">1.0.1.1.4.3.</span> <span class="nav-text">translatex()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#translatey"><span class="nav-number">1.0.1.1.4.4.</span> <span class="nav-text">translatey()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#translatez"><span class="nav-number">1.0.1.1.4.5.</span> <span class="nav-text">translatez()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#translate3d-x-y-z"><span class="nav-number">1.0.1.1.4.6.</span> <span class="nav-text">translate3d(x, y, z)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transform-origin-变换原点"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">transform-origin 变换原点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#取值"><span class="nav-number">1.0.1.2.1.</span> <span class="nav-text">取值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">1.0.1.2.2.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transition-过渡动画"><span class="nav-number">1.0.2.</span> <span class="nav-text">transition  过渡动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关属性"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">相关属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#transition-property"><span class="nav-number">1.0.2.1.0.1.</span> <span class="nav-text">transition-property</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#transition-duration"><span class="nav-number">1.0.2.1.0.2.</span> <span class="nav-text">transition-duration</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#transition-timing-function"><span class="nav-number">1.0.2.1.0.3.</span> <span class="nav-text">transition-timing-function</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#transition-delay"><span class="nav-number">1.0.2.1.0.4.</span> <span class="nav-text">transition-delay</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transition-过渡动画可以参与过渡的属性"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">transition  过渡动画可以参与过渡的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transition-function"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">transition-function</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#animation-动画铺垫"><span class="nav-number">1.0.3.</span> <span class="nav-text">animation 动画铺垫</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动画关键帧-keyframes"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">动画关键帧 @keyframes</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#animation相关属性"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">animation相关属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-name"><span class="nav-number">1.0.3.0.2.1.</span> <span class="nav-text">animation-name:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-duration"><span class="nav-number">1.0.3.0.2.2.</span> <span class="nav-text">animation-duration</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-timing-function"><span class="nav-number">1.0.3.0.2.3.</span> <span class="nav-text">animation-timing-function</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-delay"><span class="nav-number">1.0.3.0.2.4.</span> <span class="nav-text">animation-delay</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-direction"><span class="nav-number">1.0.3.0.2.5.</span> <span class="nav-text">animation-direction</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-iteration-count"><span class="nav-number">1.0.3.0.2.6.</span> <span class="nav-text">animation-iteration-count</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-fill-mode"><span class="nav-number">1.0.3.0.2.7.</span> <span class="nav-text">animation-fill-mode</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#animation-play-state"><span class="nav-number">1.0.3.0.2.8.</span> <span class="nav-text">animation-play-state</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luyao Chen</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
