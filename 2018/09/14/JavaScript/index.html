@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="web的传统模型概念客户端向服务器发送一个请求，服务器返回整个页面，如此反复。 这也是表单与ajax最根本的区别 表单（form）form表单来传输数据的方式就属于传统的web模型，当我们点击submit按钮之后，整个页面就会被刷新一下。 表单的三个重要属性 Method：数据的传输方式，一般是get或者post  get和post都是表单中Method属性的可选值，默认是get，两者的主要区别">
-<meta name="keywords" content="JavaScript,ajax">
+  <meta name="description" content="this指向1.谁调用指向谁 2.定时器那种指向window 3.call apply: 对于apply和call两者在作用上是相同的，但两者在参数上有区别的。  对于第一个参数意义都一样，但对第二个参数：  apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。  如 func.call(func1,var1,var2,va">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ajax以及ajax的封装">
-<meta property="og:url" content="http://yoursite.com/2018/09/02/手动封装ajax/index.html">
+<meta property="og:title" content="js知识点杂记">
+<meta property="og:url" content="http://yoursite.com/2018/09/14/JavaScript/index.html">
 <meta property="og:site_name" content="Chenluyao&#39;s blog">
-<meta property="og:description" content="web的传统模型概念客户端向服务器发送一个请求，服务器返回整个页面，如此反复。 这也是表单与ajax最根本的区别 表单（form）form表单来传输数据的方式就属于传统的web模型，当我们点击submit按钮之后，整个页面就会被刷新一下。 表单的三个重要属性 Method：数据的传输方式，一般是get或者post  get和post都是表单中Method属性的可选值，默认是get，两者的主要区别">
+<meta property="og:description" content="this指向1.谁调用指向谁 2.定时器那种指向window 3.call apply: 对于apply和call两者在作用上是相同的，但两者在参数上有区别的。  对于第一个参数意义都一样，但对第二个参数：  apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。  如 func.call(func1,var1,var2,va">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://wx1.sinaimg.cn/large/005NF29tly1fuh2v88ex0j30ml08v74d.jpg">
-<meta property="og:updated_time" content="2018-09-02T03:39:23.816Z">
+<meta property="og:updated_time" content="2018-09-13T18:48:24.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ajax以及ajax的封装">
-<meta name="twitter:description" content="web的传统模型概念客户端向服务器发送一个请求，服务器返回整个页面，如此反复。 这也是表单与ajax最根本的区别 表单（form）form表单来传输数据的方式就属于传统的web模型，当我们点击submit按钮之后，整个页面就会被刷新一下。 表单的三个重要属性 Method：数据的传输方式，一般是get或者post  get和post都是表单中Method属性的可选值，默认是get，两者的主要区别">
-<meta name="twitter:image" content="http://wx1.sinaimg.cn/large/005NF29tly1fuh2v88ex0j30ml08v74d.jpg">
+<meta name="twitter:title" content="js知识点杂记">
+<meta name="twitter:description" content="this指向1.谁调用指向谁 2.定时器那种指向window 3.call apply: 对于apply和call两者在作用上是相同的，但两者在参数上有区别的。  对于第一个参数意义都一样，但对第二个参数：  apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。  如 func.call(func1,var1,var2,va">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/02/手动封装ajax/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/14/JavaScript/"/>
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>ajax以及ajax的封装 | Chenluyao's blog</title>
+  <title>js知识点杂记 | Chenluyao's blog</title>
   
 
 
@@ -342,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/02/手动封装ajax/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/JavaScript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luyao Chen">
@@ -359,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ajax以及ajax的封装
+          <h1 class="post-title" itemprop="name headline">js知识点杂记
               
             
           </h1>
@@ -384,7 +382,7 @@
                 
               
 
-              <time title="创建时间：2018-09-02 11:39:34 / 修改时间：11:39:23" itemprop="dateCreated datePublished" datetime="2018-09-02T11:39:34+08:00">2018-09-02</time>
+              <time title="创建时间：2018-09-14 02:53:27 / 修改时间：02:48:24" itemprop="dateCreated datePublished" datetime="2018-09-14T02:53:27+08:00">2018-09-14</time>
             
 
             
@@ -448,174 +446,206 @@
       
 
       
-        <p><img src="http://wx1.sinaimg.cn/large/005NF29tly1fuh2v88ex0j30ml08v74d.jpg" alt="image"></p>
-<h3 id="web的传统模型"><a href="#web的传统模型" class="headerlink" title="web的传统模型"></a>web的传统模型</h3><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>客户端向服务器发送一个请求，服务器返回整个页面，如此反复。</p>
-<p>这也是表单与ajax最根本的区别</p>
-<h5 id="表单（form）"><a href="#表单（form）" class="headerlink" title="表单（form）"></a>表单（form）</h5><p>form表单来传输数据的方式就属于传统的web模型，当我们点击submit按钮之后，整个页面就会被刷新一下。</p>
-<h5 id="表单的三个重要属性"><a href="#表单的三个重要属性" class="headerlink" title="表单的三个重要属性"></a>表单的三个重要属性</h5><ul>
-<li><p>Method：数据的传输方式，一般是get或者post</p>
-<blockquote>
-<p>get和post都是表单中Method属性的可选值，默认是get，两者的主要区别在于：</p>
-<ul>
-<li><p>post传递数据量较大、较安全，用request.form(‘’)取值。</p>
-</li>
-<li><p>get传递数据量较小，没有post安全性强，用request.querystring取值</p>
-</li>
-</ul>
-<ol>
-<li>post比get安全性更强：</li>
-</ol>
-<p>在客户端，get方式通过url提交数据，提交后在地址栏中的会显示敏感的密码之类的内容，安全性较差，而post提交后地址栏不变。</p>
-<ol start="2">
-<li>post传递数据量较大</li>
-</ol>
-<p>id的url长度是有限制的，当url过长时，会自动截取超长字符。这样就容易引发一个问题，当传递的参数过多，导致url长度过长时，url自动截取超长字符，最终传递参数部分获取不到， 而post就不会有这样的问题。</p>
-</blockquote>
-</li>
-<li><p>action：action是我们要把数据传送到的地址address</p>
-</li>
-<li><p>enctype: 规定在发送表单数据之前如何对其进行编码,一般有两类值            </p>
-<ul>
-<li><code>application/x-www-form-urlencoded</code>     在发送前编码所有字符（默认值）                </li>
-<li><code>multipart/form-data</code>    (<code>&lt;input type=&#39;file&#39;&gt;</code>)      不对字符编码。当我们在使用包含文件上传控件的表单时，必须使用该值。</li>
-</ul>
-</li>
-</ul>
-<h3 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h3><h5 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h5><p>AJAX全称为“Asynchronous JavaScript and XML”(异步JavaScript和XML)，用JavaScript以异步的形式操作XML（现在操作的是JSON<code>emmm,那就应该叫AJAJ哈哈哈哈哈哈</code>）是一种创建交互式网页应用的网页开发技术。随着谷歌地图的横空出世，这种不需要刷新页面就可以与服务器通讯的方式很快被人们所知，与之相比 ，在传统的web模型中，客户端向服务器发送一个请求，服务器会返回整个页面。</p>
-<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><p>数据在客户端与服务器之间独立传输，服务器不再返回整个页面。</p>
-<h5 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h5><p>ajax相当于是在用户和服务器之间加了一个中间层，使用户操作与服务器响应异步话。并不是所有请求都提交给服务器，像一些数据验证和数据处理等都交给ajax引擎自己来做，只有确定需要重新读取新数据时，再由ajax引擎代为向服务器提交请求。</p>
-<p>[^异步、同步]: 人类语言中的异步和同步 机器语言中的同步和异步<br>[^异步、同步]: 机器语言中的异步是互不影响</p>
-<p>ajax</p>
-<h5 id="ajax优缺点"><a href="#ajax优缺点" class="headerlink" title="ajax优缺点"></a>ajax优缺点</h5><h6 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h6><ol>
-<li>页面无刷新，在页面内与服务器通信，给用户的体验很好</li>
-<li>使用异步的形式与服务器进行通信，不需要打断用户的操作，给用户的体验更好。</li>
-<li>减轻服务器的负担</li>
-<li>不需要插件或者小程序</li>
-</ol>
-<h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h6><ol>
-<li><p>不支持浏览器的后退机制</p>
-<blockquote>
-<p>history对象中的back方法，以及history功能，实质上是对浏览器机制的一种破坏</p>
-</blockquote>
-</li>
-<li><p>安全问题，跨站点脚本攻击、sql注入攻击</p>
-</li>
-<li><p>对搜索引擎支持较弱（seo）</p>
-</li>
-<li><p>不能很好的支持移动设备</p>
-</li>
-<li><p>违背了url和资源定位的初衷</p>
-</li>
-</ol>
-<h5 id="用ajax进行数据交互"><a href="#用ajax进行数据交互" class="headerlink" title="用ajax进行数据交互"></a>用ajax进行数据交互</h5><h5 id="ajax对象"><a href="#ajax对象" class="headerlink" title="ajax对象"></a>ajax对象</h5><p>ajax最重要的两个对象, <code>new XLHttpRequest()</code>和 <code>new ActiveXObject(&#39;Microsoft.XMLHTTP&#39;)</code>,我们通过ajax获取数据就是通过这两个对象，一般的主流浏览器支持第一个方法，IE6以下用第二个方法。</p>
-<h6 id="Ajax-对象方法"><a href="#Ajax-对象方法" class="headerlink" title="Ajax 对象方法"></a>Ajax 对象方法</h6><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>abort()</code></td>
-<td>停止当前请求</td>
-</tr>
-<tr>
-<td><code>getAllResponseHeaders()</code></td>
-<td>把http请求的所有响应首部作为键/值对返回</td>
-</tr>
-<tr>
-<td><code>getResponseHeader(&#39;server&#39;)</code></td>
-<td>返回值指定首部的串值</td>
-</tr>
-<tr>
-<td><code>open(“method”, “url”, true)</code></td>
-<td>建立对服务器的调用，method参数可以是GET,POST或PUT。url参数可以是相对URL或绝对URL。这个方法还包括3个可选参数</td>
-</tr>
-<tr>
-<td><code>send(content)</code></td>
-<td>向服务器发送请求</td>
-</tr>
-<tr>
-<td><code>setRequestHeader(“label”, “value”)</code></td>
-<td>把指定首部设置为所提供的值。在设置任何首部之前必须先调用open()</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onreadystatechange</td>
-<td>状态改变的事件触发器</td>
-</tr>
-<tr>
-<td>readyState</td>
-<td>对象状态（integer）状态值0 = 未初始化，未调用send()方法 ；1 = 读取中，已调用send()，正在发送请求 ；2 = 已读取，send方法执行完成，接收到全部响应内容；3 = 交互中，正在解析响应内容 4 = 完成，响应内容解析完成</td>
-</tr>
-<tr>
-<td>responseText</td>
-<td>获得字符串形式的响应数据</td>
-</tr>
-<tr>
-<td>responseXML</td>
-<td>获得XML形式的响应数据</td>
-</tr>
-<tr>
-<td>status</td>
-<td>服务器返回的状态码，如：404 = “文件未找到”、200 = “成功” 500 = “服务器内部错误” 304=“资源未被修改”</td>
-</tr>
-<tr>
-<td>statusText</td>
-<td>服务器返回的状态文本信息</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>status状态码：</p>
-<p>功能：状态码是用来描述返回的请求结构，借助状态码，我们可以知道是正确的处理了请求还是出现了错误。状态码的响应类别一共有5种 ，比如200，数字中的第一位代表响应的类别，后两位五分类。</p>
-<p>状态码的五种类别</p>
-<p>​    1XX（信息性状态码），接受的请求正在处理</p>
-<p>​    2XX（成功状态码），请求正确处理完毕</p>
-<p>​    3XX（重定向状态码），需要进行附加操作以完成请求</p>
-<p>​    4XX（客户端错误状态码），服务器无法请求类别</p>
-<p>​    5XX（服务器错误状态码），服务器处理请求出错</p>
-<p>其中一般会遇到的大致有一下14种：</p>
-<p>​    2XX 成功</p>
-<p>​    200 OK 请求已经被服务器正常处理</p>
-<p>​    204 No Content 请求处理成功，但是没有资源可以返回。</p>
-<p>​    206 Partial Content 表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求。content-Range在首部里面</p>
-<p>​    3XX 重定向</p>
-<p>​    301 Moved Permanently 永久性重定向</p>
-<p>​    302 Found 临时性重定向，进制post变成get</p>
-<p>​    303 See other 请求的对应资源存在着另一个url，因使用get方法定性获取请求的资源</p>
-<p>​    304 Not Modified 资源已找到，但是未符合要求</p>
-<p>​    307 临时重定向</p>
-<p>​    4XX 客户端错误</p>
-<p>​    400 Bad Request 请求报文中存在语法错误</p>
-<p>​    401 Unauthorized 发送的请求需要有通过HTTP认证的认证信息。如果之前请求过一次，则表示用户认证失败。</p>
-<p>​    403 Forbidden 不允许访问该资源</p>
-<p>​    404 Not Found 服务器上没有该资源</p>
-<p>​    5XX</p>
-<p>​    500 Internal Server Error 服务器端在执行请求时发生错误</p>
-<p>​    503 Service Unavailable 服务器暂时处于超附在或正在停机维护，无法处理请求</p>
-<p>注意：不少返回的状态码响应是错误的，但用户可能察觉不到这一点。</p>
-</blockquote>
-<h5 id="自己封装一个ajax"><a href="#自己封装一个ajax" class="headerlink" title="自己封装一个ajax"></a>自己封装一个ajax</h5><p>步骤：</p>
-<ol>
-<li>创建一个对象</li>
-<li>初始化信息  <code>open(method,url,flag);</code></li>
-<li>发送请求 <code>send()</code></li>
-<li>监视对象状态和服务器返回状态码的变化，当<code>readyState == 4</code>且<code>status==200</code>时，响应内容解析成功</li>
-<li>执行回调函数</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myAjax</span>(<span class="params">method,url,callback,data,flag</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span><br><span class="line">        xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsofr.XMLHTTP'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    xhr.onreadyStateChange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</span><br><span class="line">            callBack(xhr.responseText);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'error'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">if</span>(method == <span class="string">'get'</span>)&#123;</span><br><span class="line">        url += url +<span class="string">'?'</span> + data + <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">        xhr.open(<span class="string">'get'</span>,url,flag);</span><br><span class="line">        xhr.send();</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(method == <span class="string">'post'</span>)&#123;</span><br><span class="line">        xhr.open(<span class="string">'post'</span>,url,flag);</span><br><span class="line">        xhr.setRequestHeader(<span class="string">'Content-Type'</span>,<span class="string">'application/x-www-from-urle'</span>);</span><br><span class="line">        xhr.send(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h5 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h5><p>1.谁调用指向谁</p>
+<p>2.定时器那种指向window</p>
+<p>3.call apply:</p>
+<pre><code>对于apply和call两者在作用上是相同的，但两者在参数上有区别的。
 
+对于第一个参数意义都一样，但对第二个参数：
+
+apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。
+
+如 func.call(func1,var1,var2,var3)对应的apply写法为：func.apply(func1,[var1,var2,var3])
+
+同时使用apply的好处是可以直接将当前函数的arguments对象作为apply的第二个参数传入
+</code></pre><h5 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h5><p>   原型是function对象的一个属性，它定义了构造函数制造出来的对象的公共祖先。</p>
+<pre><code>通过该构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。
+
+有了原型，原型还是一个对象，那么这个名为原型的对象自然还有自己的原型，
+
+这样的原型上还有原型的结构就构成了原型链。
+</code></pre><blockquote>
+<pre><code>注意:
+
+1.绝大部分的对象最终都会继承自Object.prototype这个对象。
+
+并不是所有的对象都有原型，undefined null也都没有原型。
+
+
+
+当我们通过的一个对象改变了原型上引用值类型的属性的话，那么所有对象的这个属性的值都会随之更改.
+
+但是对象并不能删除原型上的属性。
+
+谁调用这个方法，这个方法中的this就指向这个调用它的对象。
+</code></pre></blockquote>
+<h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p>有了原型，原型还是一个对象，那么这个名为原型的对象自然还有自己的原型，这样的原型上还有原型的结构就构成了原型链。</p>
+<pre><code>当我们查找son上的属性的时候，如果son自身有属性，那么就打印出来，如果没有，就向上查找原型father，如果father上面还有这个属性，那么继续向上查找grandfoo，如果有就输出，如果没有就返回undefined。
+
+这种链式的查询结构就叫做原型链。
+</code></pre><h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h5><p> es5的作用域有全局作用域和函数作用域，es6中添加了块级作用域</p>
+<pre><code>函数作用域：
+
+定义：变量（变量作用域又称为上下文）和函数生效（能被访问）的区域
+
+JavaScript的函数是可以产生作用域的。
+</code></pre><blockquote>
+<pre><code>注意：
+
+如果在函数作用域里面声明变量没有用var的话，那么就声明了一个全局变量。
+
+ 同时，两个不同作用域（除了全局作用域）之间是不能互相访问的
+</code></pre></blockquote>
+<p>作用域链：</p>
+<p>由于函数可以互相嵌套，作用域之间自然也会产生互相嵌套的关系，这个时候就会产生作用域链。</p>
+<pre><code>当代码在一个环境中执行时，会创建变量对象的一个作用域链来保证对执行环境的有权访问的变量和函数的有序访问
+
+作用域第一个对象始终是当前执行代码所在环境变量对象
+</code></pre><h5 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h5><p>是解闭包的一个重要方法。但是注意闭包是没有办法解除的，</p>
+<pre><code>我们只能通过另一个新闭包来消除上一个闭包的影响。
+
+定义：立即执行函数不需要被定义，直接执行，执行完毕之后直接释放。
+</code></pre><h5 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h5><p>闭包就是能够读取其他函数内部变量的函数.</p>
+<pre><code>不同作用域之间不能够互相访问，但是我们如果在一个函数内部再定义一个函数，并且这个内部函数与外部函数的变量有关联，
+
+那么我们就可以通过返回这个内部的函数，然后来访问外部函数里面的变量。
+
+这个函数返回了一个依赖于这个函数的新函数，也就是说这个没有被销毁的新函数的作用域链中还存在着
+
+对原本函数的作用域的引用，就导致我们原本的函数的上下文不会被销毁，
+
+我们称返回的这个新函数是原本函数的闭包函数。
+
+闭包的缺点：
+
+1.由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，
+
+所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。
+
+解决方法是，在退出函数之前，将不使用的局部变量全部删除。/
+</code></pre><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>几种方式:</p>
+<pre><code>1.传统方式使用原型链继承 浪费继承了太多无用属性
+
+2.构造函数
+
+用call和apply 改变this指向
+
+3.共享原型
+
+就是父子构造函数一样
+
+缺点：无法改变子类原型 要改只能改一个
+
+4.圣杯模式
+
+    /原理： 函数的原型等于父级的原型 这样改变一个就不会改变父级属性
+
+    写一个新的中间的构造函数 把p的原型给f的原型 通过new一个f让他等于c的原型
+
+    共享一下f和p的原型 通过f构造出c的原型  共享原型有一个问题  构造出的对象可以改变原型上的方法
+
+    p=f  C = new F/
+
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> inherit  = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">C,P</span>)</span>&#123;</span><br><span class="line">      F.prototype = P.prototype;</span><br><span class="line">      C.prototype = <span class="keyword">new</span> F();</span><br><span class="line">      C.prototype.constructor = C;</span><br><span class="line">      C.prototype.uber = P.prototype;<span class="comment">//最后再补充一下 构造完这些 我是由谁来的 就是P.prototype</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;());</span><br></pre></td></tr></table></figure>
+</code></pre><h5 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h5><pre><code>预编译时this指向window。
+</code></pre><ol>
+<li><p>创建AO对象。首先第一步，创建一个AO对象（执行器上下文）。<code>var AO = {};</code></p>
+</li>
+<li><p>寻找形参和变量声明，将变量和形参作为AO对象的属性名添加到对象中，值为undefined。值得注意的是， 函数声明不叫变量。</p>
+</li>
+<li>将实参值和形参值相统一。这里因为属性名都已经存在了，所以直接赋值就可以了。</li>
+<li>在函数体里面寻找函数声明，将函数名作为属性名，值为这个函数的函数体。</li>
+</ol>
+<h5 id="js异步加载"><a href="#js异步加载" class="headerlink" title="js异步加载"></a>js异步加载</h5><p>script标签的特点是会阻塞后面的DOM解析，只有当script标签下载完成并且全部执行完之后，浏览器才会继续解析dom，一旦网速不好了，整个网站将会等待js加载而不进行后续渲染，</p>
+<p>html5标准引入了另一套异步加载js的方法，以前有一种写是 将script标签写在body的最后面，等DOM全部解析完成之后才加载js。</p>
+<h6 id="js异步加载的三种方案"><a href="#js异步加载的三种方案" class="headerlink" title="js异步加载的三种方案"></a>js异步加载的三种方案</h6><ol>
+<li><p>defer异步加载</p>
+<p>我们在script标签的函件写一个defer=‘defer’ 或直接写defer ，就可以让这个script变成异步加载了，但是这种异步只是针对下载方面，只有等DOMtree全部解析完成（不包括下载里面的资源）后才会异步执行。而且这个方法只有ie和一些高版本的firefox和chrome可以用。</p>
+<p>不过这一种方式可以在script标签里面写代码</p>
+<p>注意：IE6 和IE7的异步加载最后只能有2个，当多于2个的时候必须等前两个加载完才会加载第三个</p>
+<p>所有defer的js代码都保证按顺序执行</p>
+</li>
+<li><p>async异步加载</p>
+<p>async是asynchronous的缩写，它是html5的标准，下载完成之后就会立即异步执行，这种方法除了IE6-8 其他的浏览器都能用</p>
+<p>async的js代码不能保准是顺序执行的</p>
+<p>兼容性写法</p>
+<p>直接写两个script标签，一个是defer，一个是async。</p>
+<pre><code>但是这种方法有缺陷：IE高版本会加载两遍引起冲突，有些浏览器两个都没有会一个都加载不出来。
+
+所以我们就需要用async方法了
+</code></pre></li>
+</ol>
+<blockquote>
+<p>异步加载js不允许使用document.write这个方法。它会清除文档流，一旦执行就会把全部的标签都清除掉，包括自身的script标签。 </p>
+</blockquote>
+<p>c.w3c的标准规定，动态添加的script标签是异步的</p>
+<p>封装一个兼容性的异步加载js的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">asyncLoaded</span>(<span class="params">url, callback</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    script.type = <span class="string">'text/javascript'</span>;</span><br><span class="line">    <span class="keyword">if</span>(script.readyState)&#123;<span class="comment">//IE和高版本的chrome、firefox    .readyState 对象的状态  非零是读取中</span></span><br><span class="line">        script.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="comment">// onreadystatechange状态改变触发器</span></span><br><span class="line">            <span class="keyword">if</span>(script.readyState = <span class="string">'loaded'</span> || script.readyState == <span class="string">'complete'</span>)&#123;</span><br><span class="line">                script.onreadystatechange = <span class="literal">null</span>;</span><br><span class="line">                callback &amp;&amp; callback();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    script.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;<span class="comment">//Safari Chrome Opera Firefox</span></span><br><span class="line">        callback &amp;&amp; callback();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    script.src = url;</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(script);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="js加载时间线"><a href="#js加载时间线" class="headerlink" title="js加载时间线"></a>js加载时间线</h5><ol>
+<li><p>创建document对象，开始解析web页面。解析HTML元素和他们文本内容后添加element对象和text节点到文档中，这个阶段document.readyState = ‘loading’</p>
+</li>
+<li><p>遇到link外部css 创建线程加载，并继续解析文档</p>
+</li>
+<li><p>遇到script外部js，并且没有设置async、defer浏览器加载，并阻塞，等待js加载完成并执行该脚本 然后继续解析文档</p>
+</li>
+<li><p>遇到script外部js 并且设置有async 、defer、浏览器创建线程加载，并继续解析文档，对应async属性的脚本，脚本加载完后立即执行（异步禁止使用document.write()),而对于defer则是等DomTree解析完成后才执行</p>
+</li>
+<li><p>遇到img，先正常解析dom结构，然后浏览器异步加载src，并继续解析文档。</p>
+</li>
+<li><p>当文档解析完成，document.readyState = ‘interactive’</p>
+</li>
+<li><p>文档解析完成后，所有设置有defer的脚本会按顺序执行（注意与async的不同</p>
+<p>（但同样禁止使用document/.write（））</p>
+</li>
+<li><p>document对象出发DOMContentLoaded时间，这也标志着程序执行从同步脚本执行阶段转为时间驱动阶段</p>
+</li>
+<li><p>当所有async的脚本加载完成并执行后，img加载完成后</p>
+<p>document.readyState = ‘complete’ , window对象出发load事件</p>
+</li>
+<li><p>从此，以异步响应方式处理用户输入、网络事件等。</p>
+</li>
+</ol>
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><p>事件处理流程分三个阶段</p>
+<ol>
+<li>事件捕获阶段</li>
+<li>事件执行阶段</li>
+<li>事件冒泡阶段</li>
+</ol>
+<p>addEventListener 三个参数  （type,handle,flag)   【除了IE IE是attachEvent（type,handle）】</p>
+<p>flag：ture —–捕获 </p>
+<p>flag：false—–冒泡</p>
+<h5 id="前端模块化规范标准"><a href="#前端模块化规范标准" class="headerlink" title="前端模块化规范标准"></a>前端模块化规范标准</h5><pre><code>CommonJs (Node.js)
+
+AMD (RequireJS)
+
+CMD (SeaJS)
+
+
+
+1.CommonJs
+
+    CommonJS是服务器模块的规范，Node.js采用了这个规范。根据CommonJS规范，一个单独的文件就是一个模块，每一个模块都是一个单独的作用域，
+
+    在一个文件定义的变量（还包括函数和类），都是私有的，对其他文件是不可见的。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。
+
+
+
+
+2.AMD (RequireJS)
+
+    由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，因此CommonJS规范比较适用。但是，
+
+    如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范。
+
+
+
+
+3.CMD (SeaJS)
+
+    CMD规范和AMD类似，都主要运行于浏览器端，写法上看起来也很类似。主要是区别在于模块初始化时机，AMD中只要模块作为依赖时，就会加载并初始化，而CMD中，
+
+    模块作为依赖且被引用时才会初始化，否则只会加载
+</code></pre>
       
     </div>
 
@@ -636,7 +666,7 @@
     <strong>本文作者： </strong>Luyao Chen</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/09/02/手动封装ajax/" title="ajax以及ajax的封装">http://yoursite.com/2018/09/02/手动封装ajax/</a>
+    <a href="http://yoursite.com/2018/09/14/JavaScript/" title="js知识点杂记">http://yoursite.com/2018/09/14/JavaScript/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -651,8 +681,6 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/ajax/" rel="tag"># ajax</a>
-          
         </div>
       
 
@@ -664,8 +692,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/21/less/" rel="next" title="Less简要介绍">
-                <i class="fa fa-chevron-left"></i> Less简要介绍
+              <a href="/2018/09/14/ES6/" rel="next" title="ES6语法">
+                <i class="fa fa-chevron-left"></i> ES6语法
               </a>
             
           </div>
@@ -673,10 +701,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/04/深入理解jsonp跨域/" rel="prev" title="解决跨域问题">
-                解决跨域问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -865,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#web的传统模型"><span class="nav-number">1.</span> <span class="nav-text">web的传统模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表单（form）"><span class="nav-number">1.0.2.</span> <span class="nav-text">表单（form）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表单的三个重要属性"><span class="nav-number">1.0.3.</span> <span class="nav-text">表单的三个重要属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax"><span class="nav-number">2.</span> <span class="nav-text">ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#特点"><span class="nav-number">2.0.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#工作原理"><span class="nav-number">2.0.3.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ajax优缺点"><span class="nav-number">2.0.4.</span> <span class="nav-text">ajax优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#优点"><span class="nav-number">2.0.4.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#缺点"><span class="nav-number">2.0.4.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用ajax进行数据交互"><span class="nav-number">2.0.5.</span> <span class="nav-text">用ajax进行数据交互</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ajax对象"><span class="nav-number">2.0.6.</span> <span class="nav-text">ajax对象</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Ajax-对象方法"><span class="nav-number">2.0.6.1.</span> <span class="nav-text">Ajax 对象方法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自己封装一个ajax"><span class="nav-number">2.0.7.</span> <span class="nav-text">自己封装一个ajax</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#this指向"><span class="nav-number">1.</span> <span class="nav-text">this指向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#原型"><span class="nav-number">2.</span> <span class="nav-text">原型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#原型链"><span class="nav-number">3.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域"><span class="nav-number">4.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#立即执行函数"><span class="nav-number">5.</span> <span class="nav-text">立即执行函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包"><span class="nav-number">6.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#继承"><span class="nav-number">7.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#预编译"><span class="nav-number">8.</span> <span class="nav-text">预编译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#js异步加载"><span class="nav-number">9.</span> <span class="nav-text">js异步加载</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#js异步加载的三种方案"><span class="nav-number">9.1.</span> <span class="nav-text">js异步加载的三种方案</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#js加载时间线"><span class="nav-number">10.</span> <span class="nav-text">js加载时间线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件"><span class="nav-number">11.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#前端模块化规范标准"><span class="nav-number">12.</span> <span class="nav-text">前端模块化规范标准</span></a></li></ol></div>
             
 
           </div>
